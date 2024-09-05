@@ -1,0 +1,82 @@
+*
+{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+}
+h3{
+    text-align: right;
+}
+
+
+.registation-form{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:400px;
+
+}
+.registration-form h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.registation-form p{
+    font-size: 20px;
+    margin:15px 0;
+
+}
+
+.registation-form input{
+    font-size: 16px;
+    padding:15px 10px;
+    width:100%;
+    border:0;
+    border-radius: 5px;
+    outline:none;
+}
+
+.registation-form button{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding:10px 15px;
+    width:50%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.registation-form button:hover{
+    color:red;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

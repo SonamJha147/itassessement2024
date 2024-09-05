@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - VESPA.COM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d63384; /* Dark pink background color */
+            color: #333;
+        }
+        nav {
+            width: 100%;
+            background-color: #a12365; /* Darker shade of pink for the navbar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #cc3385; /* Darker pink border */
+        }
+        .logo img {
+            width: 100px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #ffb3cc;
+        }
+        .menu a:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #ffb3cc;
+            transition: width 0.4s;
+        }
+        .menu a:hover:before {
+            width: 100%;
+        }
+        .register a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: #c2185b;
+            border-radius: 8px;
+            transition: background 0.3s, border 0.3s;
+        }
+        .register a:hover {
+            background: transparent;
+            border: 1px solid #ffb3cc;
+            color: #ffb3cc;
+        }
+        .content {
+            padding: 120px 20px 20px;
+        }
+        .contact-form, .contact-info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fce4ec; /* Light pink background for forms */
+            border-radius: 8px;
+            border: 2px solid #f8bbd0; /* Light pink border color */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2, .contact-info h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #a12365;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #a12365;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #d63384;
+            outline: none;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: #d63384;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #c2185b;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+        footer {
+            background-color: #a12365; /* Footer background color */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #cc3385; /* Dark pink border */
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffb3cc;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #ffb3cc;
+            font-size: 24px; /* Larger size for social media icons */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ff99bb;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+   
+ 
+
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+
+    <nav>
+        <div class="logo">
+            <img src="vespa logo.jpg" alt="VESPA SCOOTER">
+        </div>
+        <div class="menu">
+            <a href="index.html"><b>HOME</b></a>
+            <a href="model.html"><b>MODEL</b></a>
+            <a href="offer.html"><b>OFFER</b></a>
+            <a href="about.html"><b>ABOUT</b></a>
+        </div>
+        <div class="register">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+   
+    <div class="content">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_contact_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Address:</strong> NEW ROAD, KTM, KTM</p>
+            <p><strong>Phone:</strong> +97793456789</p>
+            <p><strong>Email:</strong> VESPASCOOTY@GMAIL.COM</p>
+            <p>Feel free to reach out to us with any questions or concerns. We look forward to hearing from you!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; VESPA SCOOTY. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/VespaApriliaNepal?mibextid=ZbWKwL" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+            <a href="https://www.instagram.com/vespa?igsh=MTJjZndqZHpub2tkOA==" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://www.linkedin.com/in/sujan-shrestha-636860165/?originalSubdomain=np" target="_blank" class="fab fa-linkedin-in" title="LinkedIn"></a>
+        </div>
+    </footer>
+   
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            background-color: #d81b60; /* Dark pink background color */
+        }
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo img {
+            width: 120px;
+        }
+        .registration-form {
+            background: #ffffff; /* White background color for the registration form */
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0; /* Light gray border color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .registration-form h1 {
+            margin-bottom: 20px;
+            color: #333; /* Dark text color for the heading */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .registration-form p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555; /* Dark gray text color for labels */
+        }
+        .registration-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .registration-form input:focus {
+            border-color: #d81b60; /* Dark pink border color when focused */
+            outline: none;
+        }
+        .registration-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d81b60; /* Dark pink background color for the button */
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .registration-form button:hover {
+            background-color: #c2185b; /* Slightly darker shade of dark pink for hover */
+        }
+        footer {
+            background-color: #f8f9fa; /* Light gray background for footer */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #e0e0e0; /* Light gray border color for the footer */
+        }
+        footer a {
+            color: #d81b60; /* Dark pink link color */
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #c2185b; /* Darker pink color on hover */
+        }
+        .back-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-button a {
+            text-decoration: none;
+            color: #d81b60;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: white;
+            border: 1px solid #d81b60;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .back-button a:hover {
+            background: #d81b60;
+            color: white;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #d81b60;
+            font-size: 24px; /* Larger size for social media icons */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #c2185b; /* Darker pink color on hover */
+        }
+    </style>
+</head>
+<body>
+ 
+
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <div class="logo">
+        <img src="vespa logo.jpg" alt="VESPA Logo">
+    </div>
+    
+    <div class="registration-form">
+        <h1>Registration Form</h1>
+        <form id="registerForm" action="#" method="post" onsubmit="return validateForm()">
+            <p>Full Name</p>
+            <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+            <p>User Name</p>
+            <input type="text" name="username" id="username" placeholder="User Name">
+            <p>Email</p>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <p>Password</p>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    
+    <div class="back-button">
+        <a href="index.html">Back to Home</a>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Vespa Group. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/VespaApriliaNepal?mibextid=ZbWKwL" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+            <a href="https://www.instagram.com/vespa?igsh=MTJjZndqZHpub2tkOA==" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://www.linkedin.com/in/sujan-shrestha-636860165/?originalSubdomain=np" target="_blank" class="fab fa-linkedin-in" title="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const fullname = document.getElementById('fullname').value;
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (fullname === "" || username === "" || email === "" || password === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>

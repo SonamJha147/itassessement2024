@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vespa Scooters Showroom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d81b60; /* Dark pink background color */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: url("Background.jpg") no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            background-color: rgba(180, 207, 26, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        header h1, header p {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            width: 100%;
+            background-color: #1e88e5; /* Professional blue for the navbar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #ffeb3b; /* Yellow hover effect */
+        }
+        .menu a:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #ffeb3b;
+            transition: width 0.4s;
+        }
+        .menu a:hover:before {
+            width: 100%;
+        }
+        .register a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: #c2185b; /* Darker pink for the register button */
+            border-radius: 8px;
+            transition: background 0.3s, border 0.3s;
+        }
+        .register a:hover {
+            background: transparent;
+            border: 1px solid #ff4081;
+            color: #ff4081;
+        }
+        .content {
+            padding: 120px 20px 20px;
+            flex: 1;
+        }
+        .video {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .video video {
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #ffeb3b; /* Matching yellow border */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        .description h4 {
+            margin: 0;
+        }
+        footer {
+            background-color: #e91e63; /* Slightly lighter pink for the footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffeb3b;
+        }
+        .social-media a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #ffeb3b;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="vespa logo.jpg" alt="Vespa Logo">
+        </div>
+        <div class="menu">
+            <a href="index.html"><b>HOME</b></a>
+            <a href="model.html"><b>MODEL</b></a>
+            <a href="offer.html"><b>OFFER</b></a>
+            <a href="about.html"><b>ABOUT</b></a>
+        </div>
+        <div class="register">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+   
+    <header>
+        <h1>Welcome to Our Premier Vespa Scooter Showroom</h1>
+        <p>The Vespa scooter is an iconic Italian brand known for its stylish design, 
+            reliability, and cultural significance. First produced in 1946 by Piaggio, 
+            Vespa scooters have become synonymous with urban mobility, offering a practical
+            yet chic mode of transportation. With their classic curves, vibrant colors,
+            and vintage appeal, Vespas have a timeless quality that appeals to both enthusiasts
+            and casual riders. Beyond their aesthetics, Vespa scooters are celebrated for their
+            smooth handling, fuel efficiency, and ease of use, making them a popular choice for 
+            city commuting and leisurely rides alike.</p>
+    </header>
+
+   
+
+        <div class="description">
+            <h4>
+                Vespa is an iconic Italian scooter brand founded in 1946 by the Piaggio
+                 company. Known for its stylish design and innovative engineering, Vespa scooters have become a symbol of Italian 
+                 chic and urban mobility. The brand's name, which means "wasp" in Italian, reflects the scooter's distinctive, aerodynamic
+                  shape. Vespa scooters are celebrated for their blend of classic aesthetics and modern performance, making them popular worldwide
+                   for both practical transportation and leisure riding.
+                   Vespa offers various models catering to different needs:
+
+Vespa Primavera: Known for its youthful appeal, the Primavera features a sleek design, lightweight frame, and modern technology. It's ideal for city commuting, offering fuel efficiency and easy maneuverability.
+
+Vespa GTS: A more robust model, the GTS is designed for those who seek power and performance. It comes with a larger engine, comfortable seating, and advanced safety features, making it suitable for both urban and long-distance rides.
+
+Vespa Sprint: Targeted at younger riders, the Sprint combines a sporty look with agility. It features a modern LED lighting system, digital instrumentation, and a sporty suspension.
+
+Vespa Elettrica: Vespa’s foray into electric mobility, the Elettrica offers a silent, eco-friendly ride. It boasts a high-tech interface and sustainable design, appealing to environmentally conscious riders.
+            </h4>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vespa Scooters. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/VespaApriliaNepal?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vespa?igsh=MTJjZndqZHpub2tkOA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sujan-shrestha-636860165/?originalSubdomain=np" target="_blank"><i class="fab fa-linkedin"></i></a>
+           
+        </div>
+    </footer>
+</body>
+</html>

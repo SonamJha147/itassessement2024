@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vespa Models</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d63384;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .panel {
+            background-color: #fff;
+            border: 2px solid #d63384;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .panel h1 {
+            background-color: #d63384;
+            color: white;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .panel-body {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .panel-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #d63384;
+        }
+        footer {
+            background-color: #d63384;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+            border-top: 2px solid #d63384;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ff85c0;
+        }
+        .social-media a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #ff85c0;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+   
+
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <div class="logo">
+        <img src="vespa logo.jpg" alt="Vespa Logo">
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <h1>Vespa Primavera</h1>
+            <div class="panel-body">
+                <img src="Vespa Primavera.webp" alt="Vespa Primavera">
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>Vespa GTS Super</h1>
+            <div class="panel-body">
+                <img src="Vespa GTS Super.avif" alt="Vespa GTS Super">
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>Vespa Sprint</h1> 
+            <div class="panel-body">
+                <img src="Vespa Sprint.webp" alt="Vespa Sprint">
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>Vespa 946</h1>
+            <div class="panel-body">
+                <img src="Vespa 946.webp" alt="Vespa 946">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vespa Scooters. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/VespaApriliaNepal?mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vespa?igsh=MTJjZndqZHpub2tkOA==" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sujan-shrestha-636860165/?originalSubdomain=np" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@vespanepalofficial?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7408738676443235857" target="_blank"><i class="fa fa-tiktok"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
